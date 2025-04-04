@@ -18,13 +18,13 @@ public class Titulo {
 
     }
 
-    void evalua(double nota){
+    public void evalua(double nota){
 
         sumaEvaluaciones += nota;
         totalEvaluaciones++;
     }
 
-    double calculaMedia(){
+    public double calculaMedia(){
 
 
         return sumaEvaluaciones / totalEvaluaciones;
@@ -33,7 +33,7 @@ public class Titulo {
 
 
 
-    int getTotalEvaluaciones(){
+    public int getTotalEvaluaciones(){
 
         return totalEvaluaciones;
     }

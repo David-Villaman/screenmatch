@@ -16,6 +16,15 @@ public class Principal {
 
         pelicula.muestraFicha();
 
+        pelicula.muestraFicha();
+        pelicula.evalua(10);
+        pelicula.evalua(10);
+        pelicula.evalua(7.8);
+        System.out.println(pelicula.getTotalEvaluaciones());
+        System.out.println(pelicula.calculaMedia());
+        System.out.println("Média de evaluaciones de la película: " +pelicula.calculaMedia());
+
+
         Serie casaDragon = new Serie();
         casaDragon.setNombre("Casa del dragon");
         casaDragon.setFechaLanzamiento(2022);
@@ -43,6 +52,8 @@ public class Principal {
         episodio.setNumero(1);
         episodio.setNombre("La casa Tar");
         episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(300);
+        filtroRecomendacion.filtra(episodio);
 
     }
 }
