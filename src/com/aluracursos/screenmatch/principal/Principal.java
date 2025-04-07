@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -9,8 +11,7 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Pelicula pelicula = new Pelicula("Encanto");
-        pelicula.setFechaLanzamiento(2021);
+        Pelicula pelicula = new Pelicula("Encanto",2021);
         pelicula.setDuracion(120);
         pelicula.setIncluidoPlan(true);
 
@@ -24,16 +25,15 @@ public class Principal {
        // System.out.println("Média de evaluaciones de la película: " +pelicula.calculaMedia());
 
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("Casa del dragon");
-        casaDragon.setFechaLanzamiento(2022);
+        Serie casaDragon = new Serie("Casa del dragon", 2022);
+
+
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosEpisodio(50);
         casaDragon.setEpisodiosTemporada(10);
         //casaDragon.muestraFicha();
 
-        Pelicula otraPelicula = new Pelicula("Matrix");
-        otraPelicula.setFechaLanzamiento(1998);
+        Pelicula otraPelicula = new Pelicula("Matrix", 1999);
         otraPelicula.setDuracion(180);
 
         CalculadoraTiempo calculadora = new CalculadoraTiempo();
@@ -54,7 +54,7 @@ public class Principal {
         //filtroRecomendacion.filtra(episodio);
 
 
-        var pelicula2 = new Pelicula("Avatar");
+        var pelicula2 = new Pelicula("Avatar", 2009);
         pelicula2.setDuracion(150);
         pelicula2.setFechaLanzamiento(2001);
 

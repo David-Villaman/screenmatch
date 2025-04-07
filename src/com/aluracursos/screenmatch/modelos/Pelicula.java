@@ -7,8 +7,8 @@ public class Pelicula extends Titulo implements Clasificable {
     private String director;
 
 
-    public Pelicula(String nombre) {
-        this.setNombre(nombre);
+    public Pelicula(String nombre, int fechaLanzamiento) {
+        super(nombre, fechaLanzamiento);
     }
 
     public String getDirector() {
@@ -26,6 +26,6 @@ public class Pelicula extends Titulo implements Clasificable {
 
     @Override
     public String toString() {
-        return "Pelicula: " + this.getNombre() +" Lanzamiento: "+getFechaLanzamiento();
+        return "Pelicula: " + this.getNombre() +"("+getFechaLanzamiento()+")";
     }
 }
