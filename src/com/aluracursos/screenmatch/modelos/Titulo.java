@@ -1,8 +1,12 @@
 package com.aluracursos.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
 
+    @SerializedName("Title")
     private String nombre;
+    @SerializedName("Year")
     private int fechaLanzamiento;
     private int duracion;
     private boolean incluidoPlan;
@@ -33,9 +37,6 @@ public class Titulo implements Comparable<Titulo> {
 
         return sumaEvaluaciones / totalEvaluaciones;
     }
-
-
-
 
     public int getTotalEvaluaciones(){
 
@@ -77,5 +78,12 @@ public class Titulo implements Comparable<Titulo> {
     @Override
     public int compareTo(Titulo otroTitulo) {
         return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return "De toString "+
+                "nombre='" + nombre + '\'' +
+                ", fechaLanzamiento=" + fechaLanzamiento;
     }
 }
